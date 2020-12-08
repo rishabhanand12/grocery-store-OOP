@@ -11,7 +11,7 @@ class Counter
   def take_order
     puts "Enter the list of grocery items seperated by a comma"
     list = gets.chomp.downcase.gsub(/\s+/, '').split(',')
-    @order_list = list
+	@order_list = list
   end
 
   def generate_cart
