@@ -1,8 +1,10 @@
-require_relative price_table
+require_relative "price_table"
+require_relative "table"
 
 class Bill 
   attr_reader :total_amt, :saved_amt
-  
+  include Table
+
   def initialize cart
     @cart = cart
     @total_amt = calculate_total_amt
