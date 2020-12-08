@@ -23,7 +23,7 @@ class Bill
     total = 0
     price_list = PriceTable::Price_list
     @cart.each do |grocery_item| 
-      total += grocey_item.qty * price_list[grocery_item.item].unit_price
+      total += grocery_item.qty * price_list[grocery_item.item].unit_price
     end
     return total - @total_amt
   end

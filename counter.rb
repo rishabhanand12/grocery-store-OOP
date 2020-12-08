@@ -20,9 +20,9 @@ class Counter
   end  
 
   def generate_bill
-	@bill = Bill.new(@cart) 
+	@bill = Bill.new(@cart.cart) 
 	@bill.create_table
 	puts "\n Total Amount: $#{@bill.total_amt.round(2)}"
-	puts "\n You saved $#{@bill.saved_amt}"
+	puts "\n You saved $#{@bill.saved_amt.round(2)}"
   end
 end
