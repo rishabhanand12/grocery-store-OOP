@@ -5,7 +5,7 @@ class Cart
   
   def initialize list
     @order_list = list.tally
-    @cart = add_to_cart
+    @cart = []
   end
   
   def add_to_cart 

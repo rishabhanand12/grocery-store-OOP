@@ -21,7 +21,7 @@ class Bill
 
   def calculate_saved_amt 
     total = 0
-    price_list = PriceTable::price_list
+    price_list = PriceTable::Price_list
     @cart.each do |grocery_item| 
       total += grocey_item.qty * price_list[grocery_item.item].unit_price
     end

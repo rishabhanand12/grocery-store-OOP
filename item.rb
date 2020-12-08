@@ -8,7 +8,7 @@ class Item
   end
 
   def calculate_item_amount
-    price_list = PriceTable::price_list
+    price_list = PriceTable::Price_list
     item_details = price_list[@item]
     if @qty >= item_details.sale_eligible_qty
       return ( (@qty/item_details.sale_eligible_qty) * item_details.sale_price )  +  ( (@qty%item_details.sale_eligible_qty) * item_details.unit_price )
