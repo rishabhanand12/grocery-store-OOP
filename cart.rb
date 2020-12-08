@@ -1,5 +1,16 @@
+require_relative "item"
+
 class Cart
-  def initialize order_list
-    @cart = order_list.tally
+  attr_reader :cart
+  
+  def initialize list
+    @order_list = list.tally
+    @cart = []
+  end
+  
+  def add_to_cart order_list
+    order_list.each do |item,qty| 
+      cart << Item.new(item,qty)
+    end
   end
 end
