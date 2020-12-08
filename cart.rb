@@ -5,12 +5,12 @@ class Cart
   
   def initialize list
     @order_list = list.tally
-    @cart = []
+    @cart = add_to_cart
   end
   
-  def add_to_cart order_list
-    order_list.each do |item,qty| 
-      cart << Item.new(item,qty)
+  def add_to_cart 
+    @order_list.each do |item,qty| 
+      @cart << Item.new(item,qty)
     end
   end
 end
